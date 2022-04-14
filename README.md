@@ -42,7 +42,7 @@ Now suppose you have a list of sentences X, where each entry is a string that yo
 
 vectors is a numpy array with as many rows as the length of X, and each row is 4800 dimensional (combine-skip model, from the paper). The first 2400 dimensions is the uni-skip model, and the last 2400 is the bi-skip model. We highly recommend using the combine-skip vectors, as they are almost universally the best performing in the paper experiments.
 
-As the vectors are being computed, it will print some numbers. The code works by extracting vectors in batches of sentences that have the same length - so the number corresponds to the current length being processed. If you want to turn this off, set verbose=False when calling encode.
+As the vectors are being computed, it will print(some numbers. The code works by extracting vectors in batches of sentences that have the same length - so the number corresponds to the current length being processed. If you want to turn this off, set verbose=False when calling encode.)
 
 The rest of the document will describe how to run the experiments from the paper. For these, create a folder called 'data' to store each of the datasets.
 
@@ -122,24 +122,24 @@ The pre-processed dataset we used for training our model is now available [here]
 
 If you found this code useful, please cite the following paper:
 
-Ryan Kiros, Yukun Zhu, Ruslan Salakhutdinov, Richard S. Zemel, Antonio Torralba, Raquel Urtasun, and Sanja Fidler. **"Skip-Thought Vectors."** *arXiv preprint arXiv:1506.06726 (2015).*
+Ryan Kiros, Yukun Zhu, Ruslan Salakhutdinov, Richard S. Zemel, Antonio Torralba, Raquel Urtasun, and Sanja Fidler. **"Skip-Thought Vectors."** *arXiv preprint(arXiv:1506.06726 (2015).*)
 
     @article{kiros2015skip,
       title={Skip-Thought Vectors},
       author={Kiros, Ryan and Zhu, Yukun and Salakhutdinov, Ruslan and Zemel, Richard S and Torralba, Antonio and Urtasun, Raquel and Fidler, Sanja},
-      journal={arXiv preprint arXiv:1506.06726},
+      journal={arXiv preprint(arXiv:1506.06726},)
       year={2015}
     }
 
 If you use the BookCorpus data in your work, please also cite:
 
 Yukun Zhu, Ryan Kiros, Richard Zemel, Ruslan Salakhutdinov, Raquel Urtasun, Antonio Torralba, Sanja Fidler.
-**"Aligning Books and Movies: Towards Story-like Visual Explanations by Watching Movies and Reading Books."** *arXiv preprint arXiv:1506.06724 (2015).*
+**"Aligning Books and Movies: Towards Story-like Visual Explanations by Watching Movies and Reading Books."** *arXiv preprint(arXiv:1506.06724 (2015).*)
 
     @article{zhu2015aligning,
         title={Aligning Books and Movies: Towards Story-like Visual Explanations by Watching Movies and Reading Books},
         author={Zhu, Yukun and Kiros, Ryan and Zemel, Richard and Salakhutdinov, Ruslan and Urtasun, Raquel and Torralba, Antonio and Fidler, Sanja},
-        journal={arXiv preprint arXiv:1506.06724},
+        journal={arXiv preprint(arXiv:1506.06724},)
         year={2015}
     }
 

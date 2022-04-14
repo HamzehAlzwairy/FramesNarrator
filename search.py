@@ -47,9 +47,8 @@ def gen_sample(tparams, f_init, f_next, ctx, options, trng=None, k=1, maxlen=30,
 
             if not use_unk:
                 voc_size = next_p.shape[1]
-                for xx in range(len(cand_flat) / voc_size):
+                for xx in range(int(len(cand_flat) / voc_size)):
                     cand_flat[voc_size * xx + 1] = 1e20
-
             ranks_flat = cand_flat.argsort()[:(k-dead_k)]
 
             voc_size = next_p.shape[1]
@@ -62,6 +61,8 @@ def gen_sample(tparams, f_init, f_next, ctx, options, trng=None, k=1, maxlen=30,
             new_hyp_states = []
 
             for idx, [ti, wi] in enumerate(zip(trans_indices, word_indices)):
+                ti = int(ti)
+                wi = int(wi)
                 new_hyp_samples.append(hyp_samples[ti]+[wi])
                 new_hyp_scores[idx] = copy.copy(costs[idx])
                 new_hyp_states.append(copy.copy(next_state[ti]))
